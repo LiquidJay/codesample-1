@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Deal Pricing</title>
+   <link rel="stylesheet" href="/css/normalize.css">
+   <link rel="stylesheet" href="/css/deal-pricing.css">
+</head>
+<body>
+  	<div id="main">
+		<nav id="globalheader">
+			<div class="nav-bar-left">
+				<div class="logo">
+					<a href="/"><img src="http://stage-market.filmtrackonline.com/images/ft_logo_225_57.png"></a>
+				</div>	  
+			</div>			
+			<div class="nav-bar-right"></div>
+  		</nav>
+	  	<section id="inquiry-sct">
+	  		<h1>Product Inquiry</h1>
+	  		<div id="inq-results">
+	  			<script id="inq-entry-template" type="text/x-handlebars-template">
+	  			{{#each this}}
+	  			<div class="inq-entry">
+					<div class="inq-title">{{Title}}</div>
+					<span class="inq-right">{{Right}},</span>
+					<span class="inq-terr">{{Territory}},</span>
+					<span class="inq-date">{{#if StartDate}} {{StartDate}}, {{else}} now, {{/if}}</span>
+					<span class="inq-date">{{#if EndDate}} {{EndDate}}, {{else}} perpetuity, {{/if}}</span>
+					<span class="inq-license">{{LicenseType}}</span>
+				</div>
+				{{/each}}
+				</script>
+			</div>	  	
+	  	</section>
+	  	<section id="pricing-level-sct">
+	  		<div class="sct-header">
+	  			<div class="sct-num"><span>1</span></div>
+	  			<h1>Pricing Level</h1>
+	  		</div>
+	  		<select id="price-dropdown">
+	  			<option value="">Select Pricing</option>
+	  			<option value="Deal">Price by Deal</option>
+	  			<option value="Title">Price by Title</option>
+	  			<option value="Product">Price by Product</option>
+	  		</select>
+	  	</section>
+	  	<section id="pricing-input-sct">
+	  		<div class="sct-header">
+	  			<div class="sct-num"><span>2</span></div>
+	  			<h1>Submit Price to Buyer <span id="level-txt"></span></h1>
+	  		</div>
+	  		
+	  		<!-- SAMPLE OF PRICE BY TITLE -->
+	  		<div id="price-level-wrapper">
+		  		<div class="price-level-entry title">
+		  			$ <input type="text" class="price-input" placeholder="Enter Price" maxlength="10"/>
+		  			<span>Amile,</span> Free-TV, Germany, 2015, 2025, Exclusive
+		  		</div>
+		  		<div class="price-level-entry title">
+		  			$ <input type="text" class="price-input" placeholder="Enter Price"/>
+		  			<span>Amile,</span> Pay-TV, Germany, 2015, 2016, Exclusive
+		  		</div>
+		  		<div class="price-level-entry title">
+		  			$ <input type="text" class="price-input" placeholder="Enter Price"/>
+		  			<span> Amile,</span> Theatrical, Germany, 2014, 2015, Exclusive	
+		  		</div>
+		  		
+		  		<div id="sub-btn">
+		  			<a href="#" class="btn btn-default"> Submit Price</a>
+		  		</div>		
+		  	</div>
+	  	</section>
+	  	<footer>
+	  		<!-- include footer here -->
+	  	</footer>
+  	</div>
+  	
+  	<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.js"></script>
+	<script src="/js/deal-pricing-model.js"></script>
+	<script src="/js/deal-pricing-controller.js"></script>
+</body>
+</html>
