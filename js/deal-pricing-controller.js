@@ -20,7 +20,7 @@ $("#price-dropdown").bind("change.pricing", function(ev, levelSelected){
 	//Display the price fields to user
 	
 	//SAMPLE DEMO PURPOSES ONLY
-	if( (levelSelected).toLowerCase() == "title"){
+	if( (levelSelected).toLowerCase() == "product"){
 		$("#price-level-wrapper").show();
 	}
 	else

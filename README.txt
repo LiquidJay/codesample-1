@@ -1,4 +1,4 @@
-*A sample for submit by title level was only created
+*A sample for submit by Product Level was created only
 
 
 Deal Pricing Assignment
